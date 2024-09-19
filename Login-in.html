@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Login-in.css">
+    <script src="https://kit.fontawesome.com/195fc94fb4.js" crossorigin="anonymous"></script>
+    <title>SignUp</title>
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="formbox">
+            <h1 id="title">Sign Up</h1>
+            <form>
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Name">
+                        </div>
+                        
+
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="text" placeholder="Email">
+                            </div>
+
+
+                            <div class="input-field">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" placeholder="Password">
+                                </div>
+                                <p>Forgot Password? <a href="#">Click Here!</a></p>
+
+                    </div>
+                    <div class="btn-field">
+                        <button type="button" id="signupBtn"> Sign up</button>
+                        <button type="button" id="signinBtn"> Sign in</button>
+                    </div>
+                </div>
+            
+            </form>
+
+        </div>
+
+    </div>
+
+    <script>
+        let signinBtn = document.getElementById("signinBtn");
+        let signupBtn = document.getElementById("signupBtn");
+        let nameField = document.getElementById("nameField");
+        let title = document.getElementById("title");
+
+        signinBtn.onclick = function(){
+            nameField.style.maxHeight = "0";
+            title.innerHTML = "Sign In";
+            signupBtn.classList.add("disable");
+            signinBtn.classList.remove("disable")
+
+        }
+
+        signunpBtn.onclick = function(){
+            nameField.style.maxHeight = "60px";
+            title.innerHTML = "Sign In";
+            signupBtn.classList.remove("disable");
+            signinBtn.classList.add("disable")
+
+        }
+    </script>
+
+<footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h2><a href="index.html">UNIJOBS </a></h2>
+      </div>
+      <div class="footer-section">
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact us</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Mumbai, MH IN</p>
+        <p><i class="fas fa-envelope"></i> fishwaves@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>
