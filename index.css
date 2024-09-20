@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+html {
+    overflow-x: hidden; /* Also prevent horizontal overflow on html */
+}
+
 body {
     font-family: "Poppins", sans-serif;
     font-size: 1vh;
+    margin: 0;
+    padding: 0;
 }
 
 * {
@@ -338,58 +344,48 @@ body {
     color: black;
 }
 
+.footer-tittle {
+    text-decoration: none; /* Remove the underline */
+    color: #333; /* Set the desired color */
+    font-weight: 600;
+    display: flex;
+    align-items: center; /* Vertically center */
+    height: 100%;
+    margin-top: 50px;
+    padding-left: 100px;
+}
+
+.footer-section h2 a {
+    text-decoration: none; /* Remove the underline from the anchor tag */
+    color: inherit; /* Inherit the color from parent */
+}
+
 footer {
     background-color: #f8f9fa;
     padding: 20px;
     font-family: Arial, sans-serif;
-    width: 100%; /* Ensure the footer spans the full width */
-    position: relative; /* Keep the footer fixed at the bottom */
+    width: 115vw; /* Full width without including the scrollbar */
+    position: relative;
     bottom: 0;
     left: 0;
-    z-index: 1000; /* Ensure the footer is on top of other content */
+    z-index: 1000;
     font-size: 2vh;
-    align-items: center;
-    margin-top: 200px;
+    margin-top: 100px;
+    margin-left: -450px;
+    
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between; /* Distribute space between sections */
-    width: 100%; /* Ensure it spans the full width of the footer */
-   
-    margin: 0 auto; /* Center the container if a max-width is set */
+    justify-content: space-between; /* Distribute sections evenly */
+    width: 115vw; /* Ensure the footer covers the full width */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
     
 }
 
 .footer-section {
     flex: 1;
-    margin: 0 10px; /* Space between sections */
+    margin: 0 10px;
 }
 
-.footer-section h2,
-.footer-section h3 {
-    color: #333;
-}
-
-.footer-section ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-section ul li {
-    margin: 5px 0;
-}
-
-.footer-section ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-.footer-section p {
-    margin: 5px 0;
-}
-.footer-tittle{
-    padding-top: 30%;
-    margin-top: 50px;
-}
